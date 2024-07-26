@@ -1,1 +1,0 @@
-dotnet tool install --global --add-source .\Packages\DotNetNinja.SyncFiles.1.0.0.nupkg SyncFiles
