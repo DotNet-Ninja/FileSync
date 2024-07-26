@@ -1,0 +1,19 @@
+{
+  "type": "directory",
+  "src": "src",
+  "dest": "dist",
+  "filters": "**/*.{txt,css,js,jpg,png}",
+  "exFilters": "**/*.{gif,xml}",
+  "container": null,
+  "creds": null,
+  "credsPath": null,
+  "parallel": null,
+  "accountName": null,
+  "accountKey": null,
+  "promptOnDelete": null,
+  "root": null,
+  "sync": null,
+  "watch": null,
+  "since": null,
+  "notes": "Filters can be one or more glob patterns (https://w.wiki/4Wsx), semicolon-separated. MAY have be [bracketed], individual values MAY be in 'quotes' or \"quotes\": all will be trimmed"
+}

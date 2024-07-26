@@ -80,8 +80,10 @@ public class RunCommand: Command<RunOptions>
         var result = new SyncResult {TargetName = target.Name};
         try
         {
-            var sourceRoot = _fileSystem.DirectoryInfo.New(target.Source);
-            var destinationRoot = _fileSystem.DirectoryInfo.New(target.Destination);
+            var sourcePath = (target.Source.EndsWith("\\") ? target.Source.Substring(0, target.Source.Length - 1): target.Source);
+            var sourceRoot = _fileSystem.DirectoryInfo.New(sourcePath);
+            var destinationPath = (target.Destination.EndsWith("\\") ? target.Destination.Substring(0, target.Destination.Length - 1) : target.Destination);
+            var destinationRoot = _fileSystem.DirectoryInfo.New(destinationPath);
             foreach(var sourceFile in sourceRoot.EnumerateFiles("*", SearchOption.AllDirectories))
             {
                 var relativePath = sourceFile.FullName.Substring(sourceRoot.FullName.Length + 1);
