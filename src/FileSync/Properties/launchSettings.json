@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "FileSync": {
+      "commandName": "Project",
+      "commandLineArgs": "run"
+    }
+  }
+}
